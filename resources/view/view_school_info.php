@@ -79,7 +79,7 @@
                                         <tr>
                                             <td>{$i}</td>
                                             <td>{$admin_name}</td>
-                                            <td>{$admin_motto}</td>
+                                            <td>{$school_address}</td>
                                             <td><img class='img-responsive' src='{$admin_logo}' /></td>
                                             <td><img class='img-responsive' src='{$admin_stamp}' /></td>
                                             <td>
