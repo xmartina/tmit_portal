@@ -56,7 +56,7 @@
 <?php
     ////////// POST ACTION TO VIEW ALL THE UPLOADED ADMINISTRATIVE INFORMATION ////////////
 
-$query_1 = "SELECT * FROM `administratives` WHERE `id` = 1";
+$query_1 = "SELECT * FROM `administratives` WHERE `id` = 10";
 $run_query_1 = mysqli_query($connection, $query_1);
 
 $get_result = mysqli_fetch_assoc($run_query_1);
