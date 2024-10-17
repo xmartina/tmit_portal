@@ -62,10 +62,10 @@
                                 <td>Change Current Term</td>
                                 <td>
                                     <select name='current_term' class='form-control' >
-                                        <option selected>Select Current Term</option>
-                                        <option>First Term</option>
-                                        <option>Second Term</option>
-                                        <option>Third Term</option>
+                                        <option selected>Select Current Semester</option>
+                                        <option>First Semester</option>
+                                        <option>Second Semester</option>
+<!--                                        <option>Third Term</option>-->
                                     </select>			
                                 </td>
                             </tr>

@@ -234,7 +234,7 @@ $home_url  = $get_result['home_url'];
                 <li><a href='modules.php?school_profile'><i class='fa fa-circle-o'></i> School Profile</a></li>
                 <li><a href='modules.php?manage_school_info'><i class='fa fa-circle-o'></i> Save School Info</a></li>
                 <li><a href='modules.php?view_school_info'><i class='fa fa-circle-o'></i> View School Info</a></li>
-                <li><a href='modules.php?current_term'><i class='fa fa-circle-o'></i> Current Term</a></li>
+                <li><a href='modules.php?current_term'><i class='fa fa-circle-o'></i> Current Semester</a></li>
                 <li><a href='modules.php?current_session'><i class='fa fa-circle-o'></i> Current Session</a></li>
                 <li><a href='modules.php?add_new_session'><i class='fa fa-circle-o'></i> Add New Session</a></li>
               </ul>
