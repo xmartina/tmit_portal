@@ -1,21 +1,25 @@
 <?php
-    ///////////// POST ACTION TO SPECIFY CURRENT SESSION/////////
-    if(isset($_POST['current_session_btn'])){
-        $current_session = inject_checker($connection, $_POST['current_session']);
+///////////// POST ACTION TO SPECIFY CURRENT SESSION/////////
+if (isset($_POST['current_session_btn'])) {
+    $current_session = inject_checker($connection, $_POST['current_session']);
 
-        if($current_session === "Select Current Session"){
-            $msg = "<p class='text-danger'><b> Error: Please Select a Session to Change Current Session</b></p>";
-        }else{
-            $query = " UPDATE `current_season` SET `current_session` = '{$current_session}' ";
-            $run_query = mysqli_query($connection, $query);
-            if($run_query == true){
-                $msg = " <p class='text-success'><b>Current Session Successfully Updated</b></p>";	
-            }else{
-                $msg = "<p class='text-danger'><b>Current Session Update Failed</b></p>";
-            }
+    if ($current_session === "Select Current Session") {
+        $msg = "<p class='text-danger'><b>Error: Please Select a Session to Change Current Session</b></p>";
+    } else {
+        // Update query to include current date and time
+        $query = "UPDATE `current_season` SET `current_session` = '{$current_session}', 
+                        `date_declared` = CURDATE(), `time_declared` = NOW()";
+
+        $run_query = mysqli_query($connection, $query);
+        if ($run_query == true) {
+            $msg = "<p class='text-success'><b>Current Session Successfully Updated</b></p>";
+        } else {
+            $msg = "<p class='text-danger'><b>Current Session Update Failed</b></p>";
         }
     }
+}
 ?>
+
 <?php
     ///////////// POST ACTION TO DISPLAY CURRENT SESSION //////////////
     $query = " SELECT * FROM `current_season` ";

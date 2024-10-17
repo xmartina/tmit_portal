@@ -10,9 +10,9 @@
             $run_query = mysqli_query($connection, $query);
 
             if($run_query == true){
-                $msg = " <p class='text-success'><b>Current Term Successfully Updated</b></p>";	
+                $msg = " <p class='text-success'><b>Current Semester Successfully Updated</b></p>";
             }else{
-                $msg = "<p class='text-danger'><b>Current Term Update Failed</b></p>";
+                $msg = "<p class='text-danger'><b>Current Semester Update Failed</b></p>";
             }
         }
     }
