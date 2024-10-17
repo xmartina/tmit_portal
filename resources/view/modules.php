@@ -55,7 +55,21 @@
 ?>
 <?php
     ////////// POST ACTION TO VIEW ALL THE UPLOADED ADMINISTRATIVE INFORMATION ////////////
-    $query = " SELECT * FROM `administratives` ";
+
+$query_1 = "SELECT * FROM `administratives` WHERE `id` = 1";
+$run_query_1 = mysqli_query($connection, $query_1);
+
+$get_result = mysqli_fetch_assoc($run_query_1);
+$administrative_id = $get_result['id'];  // Fixed typo: $result to $get_result
+$school_name = $get_result['school_name'];
+$school_motto = $get_result['school_motto'];
+$school_logo = $get_result['school_logo'];
+$school_stamp = $get_result['school_stamp'];
+$school_address = $get_result['school_address'];
+$school_email = $get_result['school_email'];
+$site_url  = $get_result['site_url'];
+
+    $query = " SELECT * FROM `administratives` WHERE `id`=1";
     $run_query = mysqli_query($connection, $query);
 
     if(mysqli_num_rows($run_query) > 0){
@@ -92,7 +106,7 @@
     <link rel="shortcut icon" href="../../img/ic.png">
     <!-- Font-icon css-->
     <link rel="stylesheet" href="../../assets/css/font-awesome-4.7.0/css/font-awesome.css">
-    <title><?php echo $user_fullname; ?> ~ School Portal Kit</title>
+    <title><?= $school_name.' | '. $user_fullname; ?> ~ <?=$school_motto?></title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries-->
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
@@ -168,7 +182,7 @@
   <body class='sidebar-mini fixed'>
     <div class='wrapper'>
       <!-- Navbar-->
-      <header class='main-header hidden-print'><a class='logo' href='index.html'>School Portal Kit</a>
+      <header class='main-header hidden-print'><a class='logo' href='/'><?=$school_name?></a>
         <nav class='navbar navbar-static-top'>
           <!-- Sidebar toggle button--><a class='sidebar-toggle' href='#' data-toggle='offcanvas'></a>
           <!-- Navbar Right Menu-->
@@ -203,7 +217,7 @@
       <aside class='main-sidebar hidden-print'>
         <section class='sidebar'>
           <div class='user-panel'>
-            <div class='pull-left image'><img class='img-circle' src='../../img/author-img.png' alt='User Image'></div>
+            <div class='pull-left image'><img class='img-circle' src='<?=$site_url?>img/author-img.png' alt='User Image'></div>
             <div class='pull-left info'>
               <p><?php echo $user_fullname; ?></p>
               <p class='designation text-center'><b>Admin</b></p>
