@@ -73,11 +73,11 @@
 
                     <div class='col-md-3'>
                         <div class='input-group'>
-                            <span class='input-group-addon' id='basic-addon2'>Term:</span>
+                            <span class='input-group-addon' id='basic-addon2'>Semester:</span>
                             <select class='form-control' name='term'>
                                 <option selected ><?php echo $select; ?></option>
                                 <?php
-                                    $term_array = array("First Term", "Second Term", "Third Term");
+                                    $term_array = array("First Semester", "Second Semester");
 
                                     foreach($term_array as $term){
                                         echo "<option>{$term}</option><br>";
@@ -158,11 +158,11 @@
 
                     <div class='col-md-4'>
                         <div class='input-group'>
-                            <span class='input-group-addon' id='basic-addon2'>Term:</span>
+                            <span class='input-group-addon' id='basic-addon2'>Semester:</span>
                             <select class='form-control' name='term'>
                                 <option selected ><?php echo $select; ?></option>
                                 <?php
-                                    $term_array = array("First Term", "Second Term", "Third Term");
+                                    $term_array = array("First Semester", "Second Semester");
 
                                     foreach($term_array as $term){
                                         echo "<option>{$term}</option><br>";
