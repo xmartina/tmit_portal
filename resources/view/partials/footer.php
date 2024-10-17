@@ -1,6 +1,6 @@
 <footer class="noprint">
     <div class='container-fluid'>
-        <p class='text-center' style='color: #666;'>Copyright &#169; <?php echo $year ?> | Product of <a href='<?=$site_url?>'><?=$school_name?></a> | All Rights Reserved</p>
+        <p class='text-center' style='color: #666;'>Copyright &#169; <?php echo $year ?> | Product of <a href='<?=$home_url?>'><?=$school_name?></a> | All Rights Reserved</p>
     </div>
 </footer>
 </div>

@@ -68,6 +68,7 @@ $school_stamp = $get_result['school_stamp'];
 $school_address = $get_result['school_address'];
 $school_email = $get_result['school_email'];
 $site_url  = $get_result['site_url'];
+$home_url  = $get_result['home_url'];
 
     $query = " SELECT * FROM `administratives` WHERE `id`=1";
     $run_query = mysqli_query($connection, $query);
