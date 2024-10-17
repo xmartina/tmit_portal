@@ -71,6 +71,7 @@
                                 $admin_name = $result['school_name'];
                                 $admin_motto = $result['school_motto'];
                                 $admin_logo = $result['school_logo'];
+                                $school_address = $result['school_address'];
                                 $admin_stamp = $result['school_stamp'];
                                 //echo "<img src='$admin_logo' />";
                                 echo"

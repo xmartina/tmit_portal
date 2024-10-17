@@ -51,19 +51,16 @@
 			}
 		}
 		
-		if($current_term == "First Term"){
+		if($current_term == "First Semester"){
 			$term_code = 1;
 		}
-		elseif($current_term == "Second Term"){
+		elseif($current_term == "Second Semester"){
 			$term_code = 2;
-		}
-		elseif($current_term == "Third Term"){
-			$term_code == 3;
 		}
 		
 		$session_of_reg = substr($current_session, 0, 4);
-		$school_name = "SJSS";
-		$gen_password = "sjs";
+		$school_name = "TMIT";
+		$gen_password = "EiT";
         ////////////////// ERROR-CHECKING IF SPECIFIED FIELD IS EMPTY ////////////////////
         if($reg_student_gender === $select){
             $msg = "<p class='text-danger'><b>Error: Gender Field Required</b></p>";
@@ -125,17 +122,17 @@
 
             ///////////////////// DEFINING CLASS CODE TO GET A UNIQUE REG NUMBER /////////////////
             switch ($reg_student_tc){
-                case $reg_student_tc === "JSS1": $class_code = 4 .$reg_student_tc;
+                case $reg_student_tc === "OND1": $class_code = 4 .$reg_student_tc;
                 break;
-                case $reg_student_tc === "JSS2": $class_code = 5 .$reg_student_tc;
+                case $reg_student_tc === "OND2": $class_code = 5 .$reg_student_tc;
                 break;
-                case $reg_student_tc === "JSS3": $class_code = 6 .$reg_student_tc;
+                case $reg_student_tc === "HND1": $class_code = 6 .$reg_student_tc;
                 break;
-                case $reg_student_tc === "SSS1": $class_code = 7 .$reg_student_tc;
-                break;
-                case $reg_student_tc === "SSS2": $class_code = 8 .$reg_student_tc;
-                break;
-                case $reg_student_tc === "SSS3": $class_code = 9 .$reg_student_tc;
+                case $reg_student_tc === "HND2": $class_code = 7 .$reg_student_tc;
+//                break;
+//                case $reg_student_tc === "SSS2": $class_code = 8 .$reg_student_tc;
+//                break;
+//                case $reg_student_tc === "SSS3": $class_code = 9 .$reg_student_tc;
                 break;
                 default: $msg = "Please Select Maths Operator";
             }
